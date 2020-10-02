@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const app = express();
 //const pokemon = require('./models/pokemon');
@@ -14,6 +15,6 @@ app.use('/player', routes.player);
 //BONUS - css
 app.use(express.static('public'));
 
-app.listen(3001, () => {
+app.listen(process.env.PORT, () => {
     //console.log('I am listening on 3001');
 });
