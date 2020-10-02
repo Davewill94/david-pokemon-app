@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/show.css">
+    <title>Edit entry for: <%=pokemon.name%> </title>
+</head>
+<body>
+    <h1>Get it Wrong?</h1>
+
+    <form action='/pokemon/<%=pokemon.id%>?_method=PUT' method="POST">
+        Name: <input type="text" name='name' value="<%=pokemon.name%>" />
+        Img Url: <input type="text" name='img' value='<%=pokemon.img%>' />
+        <input type='submit' value="Edit Pokemon" />
+    </form>
+
+    Current Picture:
+    </br>
+    <img class='poke' src='<%=pokemon.img%>' alt='picture of pokemon' />
+    </br>
+    <form action='/pokemon' method="GET">
+        <input type='submit' value='Back to Main Page'/>
+    </form>
+
+</body>
+</html>

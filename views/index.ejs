@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <title>Pokemon Encyclopedia</title>
+</head>
+<body>
+    <h1>Pokeydex App</h1>
+    <div class="wrapper">
+        <nav>
+            <a href="/pokemon/new">Add a new Pokemon</a>
+        </nav>
+        <div class='list'>
+            <ul>
+                <% for(let i=0; i<pokemon.length; i++) { %>
+                    <li class='listelements'>
+                        <a href='/pokemon/<%=pokemon[i].id%>'><%=pokemon[i].name%></a>
+                        <img class='thumbNail' src='<%=pokemon[i].img%>' alt='picture of pokemon' />
+                        <!-- html only allows for get or post methods  - ?_method=DELETE replaces the post methode with the delete method with method override-->
+                        <form action='/pokemon/<%=pokemon[i].id%>?_method=DELETE' method="POST">
+                            <input type="submit" value='Delete'/>
+                        </form>
+                        <a href="/pokemon/<%=pokemon[i].id%>/edit">Edit</a>
+                    </li>
+                <% } %>
+            </ul>
+        </div>
+
+    </div> 
+
+</body>
+</html>

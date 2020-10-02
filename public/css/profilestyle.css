@@ -1,0 +1,21 @@
+body {
+    background-image: url('https://wi.wallpapertip.com/wsimgs/3-33572_pokemon-anniversary-xv.jpg');
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+}
+h1 {
+    font-family: 'Permanent Marker', cursive;
+    color: red;
+}
+form {
+    color: red;
+}
+a {
+    color: red;
+}
+label {
+    color: red;
+}
+p {
+    color: red;
+}

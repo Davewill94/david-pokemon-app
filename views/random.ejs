@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Pokemon</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <h1><%=randomName.name%></h1>
+        <img class='rescale' src='<%=randomName.sprites.front_default%>' alt='picture of pokemon' />
+
+
+        <h3>Log Pokemon</h1>
+
+        <form action="/pokemon" method='post'>
+            Name: <input type="text" name='name' value='<%=randomName.name%>' />
+            Img url: <input type="text" name='img' value='<%=randomName.sprites.front_default%>'/>
+            <input type='submit' value='Catch them all' />
+        </form>
+        <br>
+</body>
+</html>
